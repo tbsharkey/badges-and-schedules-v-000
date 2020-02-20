@@ -4,9 +4,7 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(name)
-  name.collect do |speaker|
-   "Hello, my name is #{speaker}."
-  end
+  name.collect { |speaker| "Hello, my name is #{speaker}." }
 end
 
 def assign_rooms(speakers)
@@ -16,11 +14,6 @@ def assign_rooms(speakers)
 end
 
 def printer(speakers)
-  batch_badge_creator(speakers).each do |badge|
-    puts badge
-  end
-
-  assign_rooms(speakers).each do |rooms|
-  puts rooms
-  end
+  batch_badge_creator(speakers).each { |badge| puts badge }
+  assign_rooms(speakers).each { |rooms| puts rooms }
 end
